@@ -1,15 +1,11 @@
 #!/usr/bin/env php
 <?php
 
-if ($argc !== 2 || $argv[1] === '') {
-    fprintf(STDERR, "Usage: %s FILE\n", $argv[0]);
-    exit(1);
-}
-
-$contents = base64_encode(file_get_contents($argv[1]));
+$filename = $argc === 2 ? $argv[1] : 'php://stdin';
+$contents = base64_encode(file_get_contents($filename));
 printf(
     "\u{001b}]1337;File=inline=1;name=%s;size=%d:%s\u{0007}\n",
-    base64_encode($argv[1]),
+    base64_encode($filename),
     strlen($contents),
     $contents,
 );
