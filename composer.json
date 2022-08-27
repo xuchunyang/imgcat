@@ -1,0 +1,22 @@
+{
+    "name": "xuchunyang/imgcat",
+    "description": "iTerm2's Inline Images Protocol",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Xuchunyang\\Imgcat\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Xu Chunyang",
+            "email": "xuchunyang56@gmail.com"
+        }
+    ],
+    "bin": [
+        "bin/imgcat"
+    ],
+    "require": {
+        "php": "^8.1"
+    }
+}
